@@ -1,0 +1,75 @@
+.note-detail {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  .note-empty {
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    align-items: center;
+    font-size: 80px;
+    color: white;
+    box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1);
+    letter-spacing: 10px;
+    margin-top: 300px;
+  }
+  .note-bar {
+    position: relative;
+    padding: 4px 20px;
+    border-bottom: 1px solid #eee;
+    &:after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+    .toggle {
+      position: absolute;
+      right: 200px;
+    }
+    .trash {
+      position: absolute;
+      right: 160px;
+    }
+    .iconfont {
+      font-size: 18px;
+    }
+    span {
+      margin-right: 30px;
+    }
+  }
+  .note-title {
+    input,
+    span {
+      display: inline-block;
+      width: 100%;
+      border: none;
+      outline: none;
+      color: #757575;
+      font-size: 36px;
+      font-weight: bolder;
+      padding: 10px 20px;
+      border-bottom: 2px dashed black;
+    }
+  }
+  .editor {
+    height: calc(100vh - 92px);
+    position: relative;
+  }
+  textarea,
+  .preview {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    font-size: 18px;
+  }
+  textarea {
+    border: none;
+    resize: none;
+    outline: none;
+    font-family: "Monaco", courier, monospace;
+  }
+  code {
+    color: #f66;
+  }
+}

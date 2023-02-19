@@ -1,0 +1,115 @@
+#notebook-list {
+  flex: 1;
+
+  .iconfont {
+    font-size: 18px;
+  }
+
+  .btn {
+    position: relative;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 16px 16px;
+    display: inline-block;
+    border-radius: 30px;
+    transition: all 0.2s;
+    border: none;
+    color: black;
+    background-color: white;
+  }
+
+  .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  .btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.4s;
+  }
+
+  .btn::after {
+    background-color: #fff;
+  }
+
+  .btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+  }
+
+  header {
+    padding: 30px 80px 10px;
+  }
+
+  main {
+    padding: 30px 40px;
+    height: calc(100vh - 113px);
+    overflow: scroll;
+    h3 {
+      font-size: 26px;
+      color: black;
+    }
+    .book-list {
+      margin-top: 30px;
+      font-size: 20px;
+      font-weight: bold;
+      color: #666;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 1px 25px rgba(0, 0, 0, 0.2);
+      span {
+        font-size: 16px;
+        font-weight: bold;
+      }
+    }
+
+    .iconfont {
+      color: #1687ea;
+      margin-right: 16px;
+      font-size: 24px;
+    }
+    .notebook {
+      display: block;
+      cursor: pointer;
+      border-radius: 10px;
+      .action,
+      .date {
+        float: right;
+        margin-left: 18px;
+        color: #b3c0c8;
+      }
+    }
+    .notebook:hover {
+      background-color: #f7fafd;
+      border-radius: 10px;
+    }
+    .notebook div {
+      border-bottom: 1px solid #ebebeb;
+      padding: 20px 20px;
+      &:hover {
+        transform: translateY(-2px);
+        transition: all 0.25s ease-in;
+      }
+    }
+  }
+
+  .layout {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+}
